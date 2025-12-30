@@ -8,6 +8,25 @@ const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
 document.getElementById("contador").innerText =
   `Estamos juntas há ${dias} dias 💞`;
 
+//musica
+const music = document.getElementById("music");
+const playBtn = document.getElementById("playBtn");
+
+let tocando = false;
+
+playBtn.addEventListener("click", () => {
+  if (!tocando) {
+    music.play();
+    playBtn.textContent = "⏸️";
+    tocando = true;
+  } else {
+    music.pause();
+    playBtn.textContent = "▶️";
+    tocando = false;
+  }
+});
+
+
 function mostrarMensagem() {
   const mensagem = document.getElementById("mensagem");
   mensagem.style.display = "block";
@@ -40,3 +59,4 @@ function criarCoracoes() {
     setTimeout(() => c.remove(), 5000);
   }
 }
+
