@@ -7,7 +7,36 @@ body {
     align-items: center;
     font-family: Arial, sans-serif;
   }
-  
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+#playBtn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff6f91, #ff9671);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#playBtn:hover {
+  transform: scale(1.1);
+}
+
+.song {
+  color: white;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
   .card {
     background: white;
     padding: 30px;
@@ -129,4 +158,5 @@ body {
       height: 80px;
     }
   }
+
   
