@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff8fab, #ffc078);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    width: 360px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+  
+  h1 {
+    color: #ff5d8f;
+  }
+  
+  h2 {
+    color: #ff922b;
+    margin-top: 25px;
+  }
+  
+  .intro {
+    color: #ff922b;
+    font-size: 15px;
+  }
+  
+  .contador {
+    margin: 15px 0;
+    font-weight: bold;
+    color: #ff5d8f;
+  }
+  
+  button {
+    background-color: #ff922b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 22px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #ff7a18;
+  }
+  
+  .final {
+    background-color: #ff5d8f;
+  }
+  
+  .escondido {
+    display: none;
+  }
+  
+  /* poesia */
+  .poesia .linha {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .poesia .linha.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .assinatura {
+    color: #ff5d8f;
+    font-style: italic;
+  }
+  
+  /* galeria */
+  .galeria {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .galeria img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* promessa */
+  .promessa {
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+  }
+  
+  .promessa.aparecer {
+    opacity: 1;
+  }
+  
+  /* corações */
+  .coracao {
+    position: fixed;
+    bottom: 0;
+    font-size: 22px;
+    animation: subir linear forwards;
+  }
+  
+  @keyframes subir {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-100vh); opacity: 0; }
+  }
+  
+  /* mobile */
+  @media (max-width: 480px) {
+    .card {
+      width: 90%;
+      padding: 25px;
+    }
+  
+    .galeria img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
