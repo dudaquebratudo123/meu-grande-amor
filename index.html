@@ -12,10 +12,14 @@
   <h1>Meu grande amor</h1>
 
   <div class="player">
-  <button id="playBtn">▶️</button>
-  <span class="song">
-    Lovesong — Adele
-  </span>
+  <button id="playBtn" aria-label="Play">
+    <span class="icon">▶</span>
+  </button>
+
+  <div class="track-info">
+    <p class="title">Lovesong</p>
+    <p class="artist">Adele</p>
+  </div>
 </div>
 
 <audio id="music" src="lovesong.mp3"></audio>
@@ -67,6 +71,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
