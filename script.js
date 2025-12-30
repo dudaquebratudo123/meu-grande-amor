@@ -11,17 +11,20 @@ document.getElementById("contador").innerText =
 //musica
 const music = document.getElementById("music");
 const playBtn = document.getElementById("playBtn");
+const icon = playBtn.querySelector(".icon");
 
 let tocando = false;
 
 playBtn.addEventListener("click", () => {
   if (!tocando) {
     music.play();
-    playBtn.textContent = "⏸️";
+    icon.textContent = "❚❚";
+    playBtn.classList.add("playing");
     tocando = true;
   } else {
     music.pause();
-    playBtn.textContent = "▶️";
+    icon.textContent = "▶";
+    playBtn.classList.remove("playing");
     tocando = false;
   }
 });
@@ -59,4 +62,5 @@ function criarCoracoes() {
     setTimeout(() => c.remove(), 5000);
   }
 }
+
 
